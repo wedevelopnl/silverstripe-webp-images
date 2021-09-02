@@ -16,7 +16,7 @@ class DBFileExtension extends Extension
 {
     public function updateURL(&$url): void
     {
-        if (!$this->owner->getIsImage()) {
+        if (!$this->owner->getIsImage() || $this->owner->getVisibility() !== AssetStore::VISIBILITY_PUBLIC) {
             return;
         }
 
