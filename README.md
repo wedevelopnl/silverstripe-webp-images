@@ -7,7 +7,7 @@ This SilverStripe module generates webp images from resized jpeg and png images.
 
 ## Installation
 ```sh
-composer require thewebmen/silverstripe-webp-images
+composer require webmen/silverstripe-webp-images
 ```
 
 ## Configuration
