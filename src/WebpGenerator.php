@@ -23,7 +23,7 @@ final class WebpGenerator
             return $url;
         }
 
-        if (!empty($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') !== true ) {
+        if (strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') === false) {
             return $url;
         }
 
