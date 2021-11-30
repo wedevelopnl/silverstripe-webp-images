@@ -23,6 +23,10 @@ final class WebpGenerator
             return $url;
         }
 
+        if (!empty($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'image/webp') === false) {
+            return $url;
+        }
+
         $originalFilename = PUBLIC_PATH . $url;
         $url = $url . '.webp';
         $filename = PUBLIC_PATH . $url;
