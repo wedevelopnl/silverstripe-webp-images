@@ -38,6 +38,8 @@ final class WebpGenerator
         switch ($mimeType) {
             case 'image/png':
                 $image = imagecreatefrompng($originalFilename);
+                imagepalettetotruecolor($image);
+                imagealphablending($image, true);
                 imagesavealpha($image, true);
                 break;
             case 'image/jpeg':
