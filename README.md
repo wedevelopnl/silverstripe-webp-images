@@ -10,6 +10,8 @@ This SilverStripe module generates webp images from resized jpeg and png images.
 composer require webmen/silverstripe-webp-images
 ```
 
+Next, you'll need to run a `dev/build` (or at least `flush`) to allow access to files with the `.webp` extension from the `.htaccess` in your `assets` directory.
+
 ## Configuration
 ```yml
 SilverStripe\Core\Injector\Injector:
