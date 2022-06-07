@@ -12,7 +12,7 @@
         "email": "rens@webmen.nl"
     }],
     "require": {
-        "php": "^7.4",
+        "php": ">=7.4",
         "silverstripe/cms": "^4.0"
     },
     "autoload": {
