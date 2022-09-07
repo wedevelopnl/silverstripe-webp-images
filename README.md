@@ -15,7 +15,7 @@ Next, you'll need to run a `dev/build` (or at least `flush`) to allow access to 
 ## Configuration
 ```yml
 SilverStripe\Core\Injector\Injector:
-  TheWebmen\WebpImages\Assets\WebpGenerator:
+  TheWebmen\WebpImages\WebpGenerator:
     properties:
       enabled: true
       quality: 80
