@@ -10,8 +10,8 @@ final class WebpGenerator
 {
     use Injectable;
 
-    private static bool $enabled = true;
-    private static int $quality = 80;
+    public bool $enabled = true;
+    public int $quality = 80;
 
     public function generate(string $url, string $mimeType): string
     {
@@ -48,7 +48,7 @@ final class WebpGenerator
                 break;
         }
 
-        imagewebp($image, $filename, self::$quality);
+        imagewebp($image, $filename, $this->quality);
         imagedestroy($image);
 
         return $url;
@@ -56,11 +56,11 @@ final class WebpGenerator
 
     public function setEnabled(bool $enabled): void
     {
-        self::$enabled = $enabled;
+        $this->enabled = $enabled;
     }
 
     public function getEnabled(): bool
     {
-        return self::$enabled;
+        return $this->enabled;
     }
 }
