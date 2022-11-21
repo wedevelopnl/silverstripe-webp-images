@@ -20,6 +20,6 @@ class DBFileExtension extends Extension
             return;
         }
 
-        $url = WebpGenerator::singleton()->generate($url , $this->owner->getMimeType());
+        $url = WebpGenerator::singleton()->generate($url, $this->owner->getMimeType());
     }
 }
