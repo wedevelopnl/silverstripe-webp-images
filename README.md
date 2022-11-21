@@ -2,12 +2,11 @@
 This SilverStripe module generates webp images from resized jpeg and png images.
 
 ## Requirements
-* SilverStripe ^4.0
-* GD with webp support
+see `composer.json`
 
 ## Installation
 ```sh
-composer require wedevelop/silverstripe-webp-images
+composer require wedevelopnl/silverstripe-webp-images
 ```
 
 Next, you'll need to run a `dev/build` (or at least `flush`) to allow access to files with the `.webp` extension from the `.htaccess` in your `assets` directory.
