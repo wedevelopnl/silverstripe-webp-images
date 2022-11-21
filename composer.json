@@ -1,23 +1,28 @@
 {
-    "name": "webmen/silverstripe-webp-images",
-    "description": "SilverStripe webp images",
-    "type": "silverstripe-vendormodule",
+    "name": "wedevelop/silverstripe-webp-images",
+    "description": "webp images module",
     "keywords": [
         "silverstripe",
-        "webp"
+        "webp",
+        "images"
     ],
-    "license": "BSD-3-Clause",
     "authors": [{
-        "name": "Rens Korswagen",
-        "email": "rens@webmen.nl"
+        "name": "WeDevelop",
+        "email": "development@wedevelop.nl"
     }],
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
-        "php": "^8.1",
-        "silverstripe/cms": "^4.0"
+        "php": ">=8.1",
+        "silverstripe/cms": "^4@stable",
+        "silverstripe/vendor-plugin": "^1.0"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.4"
     },
     "autoload": {
         "psr-4": {
-            "TheWebmen\\WebpImages\\": "src/"
+            "WeDevelop\\WebpImages\\": "src/"
         }
     }
 }

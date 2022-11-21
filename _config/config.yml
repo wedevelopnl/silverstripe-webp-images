@@ -3,13 +3,13 @@ Name: webpimages
 ---
 SilverStripe\Core\Injector\Injector:
   SilverStripe\Assets\Flysystem\PublicAdapter:
-    class: TheWebmen\WebpImages\Flysystem\PublicAssetAdapter
+    class: WeDevelop\WebpImages\Flysystem\PublicAssetAdapter
   SilverStripe\Assets\Flysystem\ProtectedAdapter:
-    class: TheWebmen\WebpImages\Flysystem\ProtectedAssetAdapter
+    class: WeDevelop\WebpImages\Flysystem\ProtectedAssetAdapter
 
 SilverStripe\Assets\Storage\DBFile:
   extensions:
-    - TheWebmen\WebpImages\Storage\DBFileExtension
+    - WeDevelop\WebpImages\Storage\DBFileExtension
 
 SilverStripe\Assets\File:
   allowed_extensions:

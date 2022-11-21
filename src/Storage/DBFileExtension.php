@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace TheWebmen\WebpImages\Storage;
+namespace WeDevelop\WebpImages\Storage;
 
 use SilverStripe\Assets\Storage\AssetStore;
 use SilverStripe\Assets\Storage\DBFile;
 use SilverStripe\Core\Extension;
-use TheWebmen\WebpImages\WebpGenerator;
+use WeDevelop\WebpImages\WebpGenerator;
 
 /**
  * @property DBFile $owner;
