@@ -1,13 +1,11 @@
-# SilverStripe Webp Images
+# silverstripe-webp-images
 This SilverStripe module generates webp images from resized jpeg and png images.
 
 ## Requirements
 * See `composer.json` requirements
 
 ## Installation
-```sh
-composer require wedevelopnl/silverstripe-webp-images
-```
+* `composer require wedevelopnl/silverstripe-webp-images`
 
 Next, you'll need to run a `dev/build` (or at least `flush`) to allow access to files with the `.webp` extension from the `.htaccess` in your `assets` directory.
 
@@ -16,7 +14,6 @@ See [License](LICENSE)
 
 ## Maintainers
 * [WeDevelop](https://www.wedevelop.nl/) <developement@wedevelop.nl>
-
 
 ## Configuration
 ```yml
@@ -39,7 +36,7 @@ See read our [contributing](CONTRIBUTING.md) document for more information.
 We advise to use [Docker](https://docker.com)/[Docker compose](https://docs.docker.com/compose/) for development.\
 We also included a [Makefile](https://www.gnu.org/software/make/) to simplify some commands
 
-Our development container contains some build-in tools like `PHPCSFixer`.
+Our development container contains some built-in tools like `PHPCSFixer`.
 
 #### Getting development container up
 `make build` to build the Docker container and then run detached.\
