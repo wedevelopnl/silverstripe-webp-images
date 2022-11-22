@@ -3,6 +3,7 @@ This SilverStripe module generates webp images from resized jpeg and png images.
 
 ## Requirements
 * See `composer.json` requirements
+* GD with webp support
 
 ## Installation
 * `composer require wedevelopnl/silverstripe-webp-images`

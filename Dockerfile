@@ -2,10 +2,7 @@ ARG ALPINE_VERSION=3.16
 
 FROM php:8.1-cli-alpine$ALPINE_VERSION AS php-cli
 
-RUN apk update && apk upgrade\
-   wget
-
-RUN apk add php make --update
+RUN apk add php make --no-cache
 
 WORKDIR /app
 
