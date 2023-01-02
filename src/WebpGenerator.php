@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TheWebmen\WebpImages;
+namespace WeDevelop\WebpImages;
 
 use SilverStripe\Core\Injector\Injectable;
 

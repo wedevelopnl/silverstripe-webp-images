@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace TheWebmen\WebpImages\Flysystem;
+namespace WeDevelop\WebpImages\Flysystem;
 
 class ProtectedAssetAdapter extends \SilverStripe\Assets\Flysystem\ProtectedAssetAdapter
 {
