@@ -16,10 +16,10 @@ class DBFileExtension extends Extension
 {
     public function updateURL(&$url): void
     {
-        if (!$this->owner->getIsImage() || $this->owner->getVisibility() !== AssetStore::VISIBILITY_PUBLIC) {
+        if (!$this->getOwner()->getIsImage() || $this->getOwner()->getVisibility() !== AssetStore::VISIBILITY_PUBLIC) {
             return;
         }
 
-        $url = WebpGenerator::singleton()->generate($url, $this->owner->getMimeType());
+        $url = WebpGenerator::singleton()->generate($url, $this->getOwner()->getMimeType());
     }
 }

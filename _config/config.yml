@@ -14,3 +14,7 @@ SilverStripe\Assets\Storage\DBFile:
 SilverStripe\Assets\File:
   allowed_extensions:
     - webp
+
+Silverstripe\Assets\Image:
+  extensions:
+    - WeDevelop\WebpImages\Asset\ImageExtension
