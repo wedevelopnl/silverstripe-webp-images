@@ -10,6 +10,7 @@ final class WebpGenerator
 {
     use Injectable;
 
+    private ?bool $enabledForNextGenerate = null;
     public bool $enabled = true;
     public int $quality = 80;
 
@@ -61,6 +62,24 @@ final class WebpGenerator
 
     public function getEnabled(): bool
     {
+        if (is_bool($this->getEnabledForNextGenerate())) {
+            $state = $this->getEnabledForNextGenerate();
+
+            $this->enabledForNextGenerate = null;
+
+            return $state;
+        }
+
         return $this->enabled;
+    }
+
+    public function setEnabledForNextGenerate(bool $enabled): void
+    {
+        $this->enabledForNextGenerate = $enabled;
+    }
+
+    public function getEnabledForNextGenerate(): ?bool
+    {
+        return $this->enabledForNextGenerate;
     }
 }
