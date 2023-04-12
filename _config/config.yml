@@ -17,4 +17,4 @@ SilverStripe\Assets\File:
 
 Silverstripe\Assets\Image:
   extensions:
-    - WeDevelop\WebpImages\Asset\ImageExtension
+    - TheWebmen\WebpImages\Asset\ImageExtension
