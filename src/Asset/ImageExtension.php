@@ -1,9 +1,9 @@
 <?php
 
-namespace WeDevelop\WebpImages\Asset;
+namespace TheWebmen\WebpImages\Asset;
 
 use SilverStripe\Core\Extension;
-use WeDevelop\WebpImages\WebpGenerator;
+use TheWebmen\WebpImages\WebpGenerator;
 
 class ImageExtension extends Extension
 {
