@@ -10,6 +10,10 @@ This SilverStripe module generates webp images from resized jpeg and png images.
 
 Next, you'll need to run a `dev/build` (or at least `flush`) to allow access to files with the `.webp` extension from the `.htaccess` in your `assets` directory.
 
+## Known issues
+### Using `$Image.DisableWebP` in a template
+Putting `$Image.DisableWebP` in a template will not work, this somehow calls getUrl twice, properly disabling the webp URL generation on the first run, but actually outputting the second run after which the disabled flag will have been removed. A workaround for this is to use `<img $Image.DisableWebP.AttributesHTML />`
+
 ## License
 See [License](LICENSE)
 
