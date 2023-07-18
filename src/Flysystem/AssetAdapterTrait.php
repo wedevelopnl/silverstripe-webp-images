@@ -6,12 +6,12 @@ namespace WeDevelop\WebpImages\Flysystem;
 
 trait AssetAdapterTrait
 {
-    public function delete($path): bool
+    public function delete($path): void
     {
         $location = $this->applyPathPrefix($path);
 
         @unlink($location . '.webp');
 
-        return parent::delete($path);
+        parent::delete($path);
     }
 }

@@ -11,7 +11,9 @@ final class WebpGenerator
     use Injectable;
 
     private ?bool $enabledForNextGenerate = null;
+
     public bool $enabled = true;
+
     public int $quality = 80;
 
     public function generate(string $url, string $mimeType): string
