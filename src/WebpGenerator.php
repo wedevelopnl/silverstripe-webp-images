@@ -28,19 +28,16 @@ final class WebpGenerator
         }
 
         $originalFilename = PUBLIC_PATH . $url;
-        $url = $url . '.webp';
-        $filename = PUBLIC_PATH . $url;
+        $webpUrl = "{$url}.webp";
+        $webpFilename = PUBLIC_PATH . $webPurl;
 
-        if (file_exists($filename)) {
-            return $url;
+        if (file_exists($webpFilename)) {
+            return $webpUrl;
         }
 
         switch ($mimeType) {
             case 'image/png':
                 $image = imagecreatefrompng($originalFilename);
-                imagepalettetotruecolor($image);
-                imagealphablending($image, true);
-                imagesavealpha($image, true);
                 break;
             case 'image/jpeg':
             case 'image/jpg':
@@ -48,10 +45,22 @@ final class WebpGenerator
                 break;
         }
 
-        imagewebp($image, $filename, $this->quality);
+        if ($image === false) {
+            return $url;
+        }
+
+        switch ($mimeType) {
+            case 'image/png':
+                imagepalettetotruecolor($image);
+                imagealphablending($image, true);
+                imagesavealpha($image, true);
+                break;
+        }
+
+        $webpImage = imagewebp($image, $webpFilename, $this->quality);
         imagedestroy($image);
 
-        return $url;
+        return $webpImage === false ? $url : $webpUrl;
     }
 
     public function setEnabled(bool $enabled): void
