@@ -29,7 +29,7 @@ final class WebpGenerator
 
         $originalFilename = PUBLIC_PATH . $url;
         $webpUrl = "{$url}.webp";
-        $webpFilename = PUBLIC_PATH . $webPurl;
+        $webpFilename = PUBLIC_PATH . $webpUrl;
 
         if (file_exists($webpFilename)) {
             return $webpUrl;
